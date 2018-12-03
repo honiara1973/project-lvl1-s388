@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 
 export const welcome = () => {
-    console.log(`Welcome to the Brain Games!\n`);
+  console.log('Welcome to the Brain Games!\n');
 };
 
 export const greeting = () => {
