@@ -1,6 +1,6 @@
 {
   "name": "braingames_anna",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Enjoy playing braingames with us",
   "main": "index.js",
   "bin": {
@@ -26,5 +26,8 @@
     "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.1.6",
     "cross-env": "^5.2.0"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.9"
   }
 }
