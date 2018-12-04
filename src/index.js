@@ -6,7 +6,7 @@ const car = pair => pair('car');
 const cdr = pair => pair('cdr');
 
 export const welcome = () => {
-  console.log('Welcome to the Brain Games!\n');
+  console.log('Welcome to the Brain Games!');
 };
 
 export const greeting = () => {
@@ -18,7 +18,7 @@ export const gameFlow = (rules, func) => {
   welcome();
   console.log(`${rules} \n`);
   const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
+  console.log(`Hello, ${userName}!\n`);
 
   for (let i = 0; i < attempts; i += 1) {
     const result = func();
