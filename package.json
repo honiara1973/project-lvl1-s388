@@ -1,12 +1,13 @@
 {
   "name": "braingames_anna",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Enjoy playing braingames with us",
   "main": "",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
     "brain-even": "dist/bin/brain-even.js",
-    "brain-calc": "dist/bin/brain-calc.js"
+    "brain-calc": "dist/bin/brain-calc.js",
+    "brain-gcd": "dist/bin/brain-gcd.js"
   },
   "files": [
     "dist"
