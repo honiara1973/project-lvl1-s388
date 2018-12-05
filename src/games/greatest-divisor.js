@@ -1,5 +1,8 @@
-import { getRandomInt, cons } from '../math';
+import { cons } from 'hexlet-pairs';
+import { getRandomInt } from '../utils';
 import { gameFlow } from '..';
+
+const description = 'Find the greatest common divisor of given numbers.';
 
 const findDivisor = (num1, num2) => {
   let divisor = 1;
@@ -14,20 +17,19 @@ const findDivisor = (num1, num2) => {
   return divisor;
 };
 
-const description = 'Find the greatest common divisor of given numbers.';
+const getData = () => {
+  const first = getRandomInt(0, 100);
+  const second = getRandomInt(0, 100);
+  const question = `${first} ${second}`;
+
+  const correctAnswer = findDivisor(first, second).toString();
+
+  return cons(question, correctAnswer);
+};
+
 
 const brainDiv = () => {
-  const getDates = () => {
-    const first = getRandomInt(0, 100);
-    const second = getRandomInt(0, 100);
-    const question = `${first} ${second}`;
-
-    const correctAnswer = findDivisor(first, second).toString();
-
-    return cons(question, correctAnswer);
-  };
-
-  gameFlow(description, getDates);
+  gameFlow(description, getData);
 };
 
 export default brainDiv;

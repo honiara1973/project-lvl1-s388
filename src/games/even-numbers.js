@@ -1,18 +1,19 @@
-import { getRandomInt, cons } from '../math';
+import { cons } from 'hexlet-pairs';
+import { getRandomInt } from '../utils';
 import { gameFlow } from '..';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
 
+const isEven = num => num % 2 === 0;
+
+const getData = () => {
+  const question = getRandomInt(0, 10000);
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
+  return cons(question, correctAnswer);
+};
+
 const brainEven = () => {
-  const getDates = () => {
-    const question = getRandomInt(0, 10000);
-
-    const correctAnswer = question % 2 === 0 ? 'yes' : 'no';
-
-    return cons(question, correctAnswer);
-  };
-
-  gameFlow(description, getDates);
+  gameFlow(description, getData);
 };
 
 export default brainEven;
