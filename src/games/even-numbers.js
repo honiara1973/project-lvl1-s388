@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import { getRandomInt } from '../utils';
-import { gameFlow } from '..';
+import gameFlow from '..';
 
 const description = 'Answer "yes" if number even otherwise answer "no".';
 
@@ -12,8 +12,6 @@ const getData = () => {
   return cons(question, correctAnswer);
 };
 
-const brainEven = () => {
+export default () => {
   gameFlow(description, getData);
 };
-
-export default brainEven;

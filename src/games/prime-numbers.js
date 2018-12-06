@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import { getRandomInt } from '../utils';
-import { gameFlow } from '..';
+import gameFlow from '..';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -9,7 +9,7 @@ const isPrime = (num) => {
     return false;
   }
 
-  for (let i = 2; i < num; i += 1) {
+  for (let i = 2; i < Math.sqrt(num); i += 1) {
     if (num % i === 0) {
       return false;
     }
@@ -24,8 +24,6 @@ const getData = () => {
   return cons(question, correctAnswer);
 };
 
-const brainPrime = () => {
+export default () => {
   gameFlow(description, getData);
 };
-
-export default brainPrime;

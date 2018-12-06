@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import { getRandomInt } from '../utils';
-import { gameFlow } from '..';
+import gameFlow from '..';
 
 const description = 'What number is missing in the progression?';
 
@@ -27,8 +27,6 @@ const getData = () => {
   return cons(question, correctAnswer);
 };
 
-const brainProgression = () => {
+export default () => {
   gameFlow(description, getData);
 };
-
-export default brainProgression;

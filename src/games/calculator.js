@@ -1,6 +1,6 @@
 import { cons } from 'hexlet-pairs';
 import { getRandomInt } from '../utils';
-import { gameFlow } from '..';
+import gameFlow from '..';
 
 const description = 'What is the result of the expression?';
 
@@ -35,8 +35,6 @@ const getData = () => {
   return cons(question, correctAnswer);
 };
 
-const brainCalc = () => {
+export default () => {
   gameFlow(description, getData);
 };
-
-export default brainCalc;

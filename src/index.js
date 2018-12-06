@@ -3,17 +3,8 @@ import { car, cdr } from 'hexlet-pairs';
 
 const attempts = 3;
 
-export const welcome = () => {
+export default (description, getData) => {
   console.log('Welcome to the Brain Games!');
-};
-
-export const greeting = () => {
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-};
-
-export const gameFlow = (description, getData) => {
-  welcome();
   console.log(`${description} \n`);
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!\n`);

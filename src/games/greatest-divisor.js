@@ -1,12 +1,12 @@
 import { cons } from 'hexlet-pairs';
 import { getRandomInt } from '../utils';
-import { gameFlow } from '..';
+import gameFlow from '..';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
 const findDivisor = (num1, num2) => {
   let divisor = 1;
-  const min = num1 < num2 ? num1 : num2;
+  const min = Math.min(num1, num2);
 
   for (let i = 1; i <= min; i += 1) {
     if (num1 % i === 0 && num2 % i === 0) {
@@ -27,9 +27,6 @@ const getData = () => {
   return cons(question, correctAnswer);
 };
 
-
-const brainDiv = () => {
+export default () => {
   gameFlow(description, getData);
 };
-
-export default brainDiv;
