@@ -2,7 +2,7 @@ install:
 	npm install
 
 start:
-	npx babel-node -- 'src/bin/brain-balance.js'
+	npx babel-node -- 'src/bin/brain-menu.js'
 
 publish:
 	npm publish
